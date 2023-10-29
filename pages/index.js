@@ -13,6 +13,7 @@ function HomePage(props) {
           content='Find a lot of great events that allow you to evolve...'
         />
       </Head>
+       {/* this head tag will overwritten head tag in _app.js */}
       <EventList items={props.events} />
     </div>
   );
