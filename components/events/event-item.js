@@ -20,6 +20,8 @@ function EventItem(props) {
   return (
     <li className={classes.item}>
       <Image src={'/' + image} alt={title} width={250} height={160} />
+      {/* Image from Nextjs support lazy load
+      the style of image will be detemine in css , properties width and height will init size of img  */}
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
