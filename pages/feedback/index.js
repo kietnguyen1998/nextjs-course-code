@@ -21,6 +21,7 @@ function FeedbackPage(props) {
           <li key={item.id}>
             {item.text}{' '}
             <button onClick={loadFeedbackHandler.bind(null, item.id)}>
+              {/* first param is this keyword which referd in the loadFeedbackHandler func ,second param is parameter parse in func  */}
               Show Details
             </button>
           </li>
@@ -30,6 +31,8 @@ function FeedbackPage(props) {
   );
 }
 
+
+//do not call api internal, use fs and path to extract data from db if use getStaticProp and getServersideProp
 export async function getStaticProps() {
   const filePath = buildFeedbackPath();
   const data = extractFeedback(filePath);
