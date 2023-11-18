@@ -12,8 +12,10 @@ function NewsletterRegistration() {
     fetch("/api/newletter", {
       method: "POST",
       body: JSON.stringify({ email: enterEmail }),
+
+
       headers: {
-        "Content-Type": "appication/json",
+        "Content-Type": "application/json",
       },
     })
       .then((res) => res.json())
